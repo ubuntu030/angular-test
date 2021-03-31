@@ -4,7 +4,7 @@
 
 <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
+    <h4 class="modal-title pull-left">申請</h4>
     <button
       type="button"
       class="close pull-right"
@@ -14,7 +14,129 @@
       <span aria-hidden="true">×</span>
     </button>
   </div>
-  <div class="modal-body">This is a sample modal dialog box.</div>
+  <div class="modal-body container">
+    <section class="my-2 p-2 table-primary">
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>公告類別</label>
+          <div class="pl-2 ml-auto">
+            <span>一般公告</span>
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label>公告單位</label>
+          <div class="pl-2 ml-auto">
+            <span>營運管理處</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>發佈日期</label>
+          <div class="pl-2 ml-auto">
+            <span>2020/12/31</span>
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label>發佈者</label>
+          <div class="pl-2 ml-auto">
+            <span>大朋友(child)</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>上架日期</label>
+          <div class="pl-2 ml-auto">
+            <span>2021/3/5</span>
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label>下架日期</label>
+          <div class="pl-2 ml-auto">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>下載審核</label>
+          <div class="pl-2 ml-auto">
+            <input type="checkbox" name="" id="" disabled checked />
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label>下載審核者</label>
+          <div class="pl-2 ml-auto">
+            <span>公告單位主管</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>浮水印</label>
+          <div class="pl-2 ml-auto">
+            <input type="checkbox" name="" id="" disabled checked />
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>公告名稱</label>
+          <div class="pl-2 ml-auto">
+            <span>稽核公告</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>檔案名稱</label>
+          <div class="pl-2 ml-auto">
+            <span>稽核表</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label></label>
+          <div class="pl-2 ml-auto">
+            <span>使用說明</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label></label>
+          <div class="pl-2 ml-auto">
+            <span>範例</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+    </section>
+    <section class="my-2 p-2">
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>申請人</label>
+          <div class="pl-2 offset-md-1">
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>申請原因</label>
+          <div class="pl-2 offset-md-1">
+            <textarea name="" id="" cols="50" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-default" (click)="modalRef.hide()">
       Close
