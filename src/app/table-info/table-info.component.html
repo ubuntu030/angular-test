@@ -1,69 +1,83 @@
   <main class="container">
     <h3>下載專區</h3>
-    <section>
+    <section class="my-2">
       <div class="row mb-2">
-        <div class="col">
-          <label>公告類別</label>
-          <div>
+        <div class="col form-inline">
+          <label class="ml-auto">公告類別</label>
+          <div class="pl-2">
             <input type="text">
           </div>
         </div>
-        <div class="col">
-          <label>公告單位</label>
-          <div>
+        <div class="col form-inline">
+          <label class="ml-auto">公告單位</label>
+          <div class="pl-2">
+            <input type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="ml-auto">發佈日期</label>
+          <div class="pl-2">
+            <input type="text">
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label class="ml-auto">關鍵字查詢</label>
+          <div class="pl-2">
             <input type="text">
           </div>
         </div>
       </div>
       <div class="row mb-2">
         <div class="col">
-          <label>發佈日期</label>
-          <div>
-            <input type="text">
-          </div>
-        </div>
-        <div class="col">
-          <label>關鍵字查詢</label>
-          <div>
-            <input type="text">
-          </div>
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col">
-          <button class="float-right">查詢</button>
+          <button type="button" class="btn btn-primary float-right">查詢</button>
+
         </div>
       </div>
     </section>
-    <section>
+    <section class="my-2">
       <div>
-        <table class="table">
+        <table class="table table-bordered">
           <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+            <tr class="table-info">
+              <th scope="col">發佈日期</th>
+              <th scope="col">公告類別</th>
+              <th scope="col">公告名稱</th>
+              <th scope="col">附件名稱</th>
+              <th scope="col">檔案下載</th>
+              <th scope="col">檔案大小</th>
+              <th scope="col">更新日期</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row">2021/3/4</th>
+              <td>一般公告</td>
+              <td>公司LOGO</td>
+              <td>
+                <div>
+                  LOGO 使用說明 範例 
+                </div>
+              </td>
+              <td>檔案</td>
+              <td>1.5MB</td>
+              <td>2021/3/3</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+              <th scope="row">2021/3/4</th>
+              <td>單位公告</td>
+              <td>稽核單</td>
+              <td>
+                <div>
+                  稽核單 使用說明
+                </div>
+              </td>
+              <td>
+                <button class="btn btn-secondary">申請</button>
+              </td>
+              <td>-</td>
+              <td>2021/3/20</td>
             </tr>
           </tbody>
         </table>
