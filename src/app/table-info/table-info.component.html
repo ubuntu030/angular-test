@@ -18,8 +18,21 @@
     <div class="row mb-2">
       <div class="col form-inline">
         <label class="ml-auto">發佈日期</label>
-        <div class="pl-2">
-          <input type="text" />
+        <div class="pl-2 form-inline">
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text"
+                   placeholder="Datepicker"
+                   class="form-control w-100"
+                   bsDatepicker
+                   [bsConfig]="{ adaptivePosition: true }">
+          </div>
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text"
+                   placeholder="Datepicker"
+                   class="form-control w-100"
+                   bsDatepicker
+                   [bsConfig]="{ adaptivePosition: true }">
+          </div>
         </div>
       </div>
       <div class="col form-inline">
