@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-table-info',
   templateUrl: './table-info.component.html',
-  styleUrls: ['./table-info.component.scss']
+  styleUrls: ['./table-info.component.scss'],
 })
 export class TableInfoComponent implements OnInit {
+  modalRef!: BsModalRef;
 
-  constructor() { }
+  constructor(private modalService: BsModalService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(
+      template,
+      Object.assign({}, { class: 'modal-lg' })
+    );
   }
-
 }
