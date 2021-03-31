@@ -1,0 +1,17 @@
+.tableSection {
+  .table {
+    thead {
+      th {
+        vertical-align: middle;
+        span {
+          display: block;
+        }
+      }
+    }
+    tbody {
+      td {
+        word-break: keep-all;
+      }
+    }
+  }
+}
