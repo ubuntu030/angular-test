@@ -11,7 +11,9 @@ export class DownloadApplicationComponent implements OnInit {
 
   constructor(private modalService: BsModalService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('downlaod-application init');
+  }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(
