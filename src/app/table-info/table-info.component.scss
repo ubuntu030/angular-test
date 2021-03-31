@@ -1,3 +1,24 @@
+.tableSection {
+  .table {
+    thead {
+      th {
+        vertical-align: middle;
+        padding: 0.4em;
+
+        span {
+          display: block;
+        }
+      }
+    }
+    tbody {
+      td {
+        word-break: keep-all;
+        padding: 0.4em;
+      }
+    }
+  }
+}
+
 .modal-body {
   .row {
     .col {
