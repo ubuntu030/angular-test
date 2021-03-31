@@ -10,12 +10,14 @@ import { TableInfoComponent } from './table-info/table-info.component';
 import { DownloadApplicationComponent } from './download-application/download-application.component';
 
 import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { DownloadApprovalComponent } from './download-approval/download-approval.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableInfoComponent,
-    DownloadApplicationComponent
+    DownloadApplicationComponent,
+    DownloadApprovalComponent
   ],
   imports: [
     BrowserModule,

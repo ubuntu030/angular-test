@@ -1,0 +1,276 @@
+<main class="container">
+  <h3>下載專區</h3>
+  <section class="my-2">
+    <div class="row mb-2">
+      <div class="col form-inline">
+        <label class="">公告類別</label>
+        <div class="pl-2">
+          <select class="form-control" id="exampleFormControlSelect2">
+            <option>請選擇</option>
+            <option>一般公告</option>
+            <option>單位公告</option>
+            <option>主管位公告</option>
+          </select>
+        </div>
+      </div>
+      <div class="col form-inline">
+        <label class="">公告單位</label>
+        <div class="pl-2">
+          <select class="form-control" id="exampleFormControlSelect2">
+            <option>請選擇</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col form-inline">
+        <label class="">發佈日期</label>
+        <div class="pl-2 form-inline">
+          <div class="">
+            <input
+              type="text"
+              placeholder="起日"
+              class="form-control w-100"
+              bsDatepicker
+              [bsConfig]="{ adaptivePosition: true }"
+            />
+          </div>
+          <span> ~ </span>
+          <div class="">
+            <input
+              type="text"
+              placeholder="訖日"
+              class="form-control w-100"
+              bsDatepicker
+              [bsConfig]="{ adaptivePosition: true }"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col form-inline">
+        <label class="">關鍵字查詢</label>
+        <div class="pl-2">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <button type="button" class="btn btn-primary float-right">查詢</button>
+      </div>
+    </div>
+  </section>
+  <section class="my-2">
+    <div>
+      <table class="table table-bordered">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">發佈日期</th>
+            <th scope="col">公告類別</th>
+            <th scope="col">公告名稱</th>
+            <th scope="col">附件名稱</th>
+            <th scope="col">檔案下載</th>
+            <th scope="col">檔案大小</th>
+            <th scope="col">更新日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2021/3/4</th>
+            <td>一般公告</td>
+            <td>公司LOGO</td>
+            <td>
+              <div>LOGO 使用說明 範例</div>
+            </td>
+            <td>檔案</td>
+            <td>1.5MB</td>
+            <td>2021/3/3</td>
+          </tr>
+          <tr>
+            <th scope="row">2021/3/4</th>
+            <td>單位公告</td>
+            <td>稽核單</td>
+            <td>
+              <div>稽核單 使用說明</div>
+            </td>
+            <td>
+              <button class="btn btn-secondary" (click)="openModal(template)">
+                申請
+              </button>
+            </td>
+            <td>-</td>
+            <td>2021/3/20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<!-- FIXME: 用子模組包裹 bootstrap modal -->
+<!-- bootstrap modal -->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">申請</h4>
+    <button
+      type="button"
+      class="close pull-right"
+      aria-label="Close"
+      (click)="modalRef.hide()"
+    >
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body container">
+    <section class="my-2 p-2">
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">公告類別</label>
+          <div class="pl-2 ml-auto">
+            <span>一般公告</span>
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label class="table-primary">公告單位</label>
+          <div class="pl-2 ml-auto">
+            <span>營運管理處</span>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-1 mb-1" />
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">發佈日期</label>
+          <div class="pl-2 ml-auto">
+            <span>2020/12/31</span>
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label class="table-primary">發佈者</label>
+          <div class="pl-2 ml-auto">
+            <span>大朋友(child)</span>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-1 mb-1" />
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">上架日期</label>
+          <div class="pl-2 ml-auto">
+            <span>2021/3/5</span>
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label class="table-primary">下架日期</label>
+          <div class="pl-2 ml-auto">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-1 mb-1" />
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">下載審核</label>
+          <div class="pl-2 ml-auto">
+            <input type="checkbox" name="" id="" disabled checked />
+          </div>
+        </div>
+        <div class="col form-inline">
+          <label class="table-primary">下載審核者</label>
+          <div class="pl-2 ml-auto">
+            <span>公告單位主管</span>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-1 mb-1" />
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">浮水印</label>
+          <div class="pl-2 ml-auto">
+            <input type="checkbox" name="" id="" disabled checked />
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <hr class="mt-1 mb-1" />
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">公告名稱</label>
+          <div class="pl-2 ml-auto">
+            <span>稽核公告</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <hr class="mt-1 mb-1" />
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary">檔案名稱</label>
+          <div class="pl-2 ml-auto">
+            <span>稽核表</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label></label>
+          <div class="pl-2 ml-auto">
+            <span>使用說明</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label></label>
+          <div class="pl-2 ml-auto">
+            <span>範例</span>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
+      <hr class="mt-1 mb-1" />
+    </section>
+    <section class="my-2 p-2">
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>申請人</label>
+          <div class="pl-2 offset-md-1">
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label>申請原因</label>
+          <div class="pl-2 offset-md-1">
+            <textarea
+              name=""
+              id=""
+              class="form-control"
+              cols="50"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-primary ml-auto"
+      (click)="modalRef.hide()"
+    >
+      申請
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary mr-auto"
+      (click)="modalRef.hide()"
+    >
+      取消
+    </button>
+  </div>
+</ng-template>
