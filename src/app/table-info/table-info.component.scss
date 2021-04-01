@@ -8,8 +8,8 @@
       background: #b0b0b0;
       width: 38px;
       padding: 6px;
-      border-top-right-radius: .25em;
-      border-bottom-right-radius:.25em
+      border-top-right-radius: 0.25em;
+      border-bottom-right-radius: 0.25em;
     }
   }
 }
@@ -30,10 +30,23 @@
       td {
         word-break: keep-all;
         padding: 0.4em;
+
         .td-group {
+          &.img-desc {
+            span {
+              height: 26px;
+            }
+          }
           span {
             display: block;
           }
+        }
+        .file-icon {
+          height: 26px;
+          cursor: pointer;
+        }
+        .block-span {
+          display: block;
         }
       }
     }
