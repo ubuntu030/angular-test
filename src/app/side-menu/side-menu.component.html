@@ -1,0 +1,27 @@
+<div class="side-menu-ctn">
+  <div class="title-ctn">
+    <img src="/assets/icons/menu_s_01@2x.png" alt="" srcset="" />
+    <div
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="collapseBasic"
+      class="title"
+    >
+      資訊專區
+    </div>
+  </div>
+  <div
+    id="collapseBasic"
+    [collapse]="isCollapsed"
+    [isAnimated]="true"
+    class="group-list-ctn"
+  >
+    <ul class="group-list">
+      <li>公告規章</li>
+      <li>最新公告維護設定</li>
+      <li>下載專區</li>
+      <li>下載專區維護設定</li>
+      <li>下載專區審核</li>
+    </ul>
+  </div>
+</div>
