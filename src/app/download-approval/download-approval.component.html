@@ -1,6 +1,6 @@
 <main class="container">
   <h3>下載專區審核</h3>
-  <section class="my-2">
+  <section class="my-2 querySection">
     <div class="row mb-2">
       <div class="col form-inline">
         <label class="">審核類別</label>
@@ -39,7 +39,7 @@
       <div class="col form-inline">
         <label class="">發佈日期</label>
         <div class="pl-2 form-inline">
-          <div class="">
+          <div class="datepicker-ctn">
             <input
               type="text"
               placeholder="起日"
@@ -47,15 +47,27 @@
               bsDatepicker
               [bsConfig]="{ adaptivePosition: true }"
             />
+            <img
+              src="/assets/icons/day@2x.png"
+              class="day-icon"
+              alt=""
+              srcset=""
+            />
           </div>
           <span> ~ </span>
-          <div class="">
+          <div class="datepicker-ctn">
             <input
               type="text"
-              placeholder="訖日"
+              placeholder="起日"
               class="form-control w-100"
               bsDatepicker
               [bsConfig]="{ adaptivePosition: true }"
+            />
+            <img
+              src="/assets/icons/day@2x.png"
+              class="day-icon"
+              alt=""
+              srcset=""
             />
           </div>
         </div>
@@ -159,10 +171,10 @@
       </table>
     </div>
     <div class="row mb-2">
-        <div class="col">
-          <button type="button" class="btn btn-primary">核准</button>
-        </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary">核准</button>
       </div>
+    </div>
   </section>
 </main>
 
