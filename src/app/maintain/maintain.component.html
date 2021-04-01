@@ -1,8 +1,5 @@
 <main class="container">
-  <section class="row my-2">
-    <h3>下載專區維護設定</h3>
-    <button class="btn btn-primary ml-auto mr-3">新增</button>
-  </section>
+  <h3>下載專區維護設定</h3>
   <section class="my-2 querySection">
     <div class="row mb-2">
       <div class="col form-inline">
@@ -30,10 +27,9 @@
         <label class="title">公告狀態</label>
         <div class="pl-2">
           <select class="form-control" id="exampleFormControlSelect2">
-            <option>請選擇</option>
+            <option>已退回</option>
             <option>審核中</option>
             <option>已核准</option>
-            <option>已退回</option>
           </select>
         </div>
       </div>
@@ -84,7 +80,8 @@
     </div>
     <div class="row mb-2">
       <div class="col">
-        <button type="button" class="btn btn-primary float-right">查詢</button>
+        <button class="btn btn-primary ml-auto mr-3 float-right">新增</button>
+        <button type="button" class="btn btn-primary mr-3 float-right">查詢</button>
       </div>
     </div>
   </section>
@@ -135,7 +132,7 @@
               </div>
             </td>
             <td></td>
-            <td>待審核</td>
+            <td>退件</td>
             <td>
               <div class="td-group">
                 <span>LOGO</span>
@@ -155,8 +152,18 @@
             <td></td>
             <td>V</td>
             <td>
-                <img src="/assets/icons/button_preview@2x.png" class="icon-button" alt="" srcset="">
-                <img src="/assets/icons/icons8-ball-point-pen-48.png" class="icon-button" alt="" srcset="">
+              <img
+                src="/assets/icons/button_preview@2x.png"
+                class="icon-button"
+                alt=""
+                srcset=""
+              />
+              <img
+                src="/assets/icons/icons8-ball-point-pen-48.png"
+                class="icon-button"
+                alt=""
+                srcset=""
+              />
             </td>
           </tr>
           <tr>
@@ -167,7 +174,7 @@
               </div>
             </td>
             <td></td>
-            <td>待審核</td>
+            <td>已核准</td>
             <td>
               <div class="td-group">
                 <span>稽核單</span>
