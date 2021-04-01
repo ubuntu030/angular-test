@@ -16,6 +16,12 @@
 
 .tableSection {
   .table {
+    .icon-button {
+      width: 32px;
+      background-color: #97caf1;
+      display: inline-block;
+      cursor: pointer;
+    }
     thead {
       th {
         vertical-align: middle;
@@ -28,7 +34,8 @@
       }
     }
     tbody {
-      td,th {
+      td,
+      th {
         word-break: keep-all;
         padding: 0.4em;
         .td-group {
