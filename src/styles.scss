@@ -1,12 +1,35 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+main#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  section.router-container {
+    overflow: auto;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "menu router";
+  grid-template-columns: 236px 1fr;
+  .side-meun {
+    grid-area: menu;
+  }
+
+  .router-container {
+    grid-area: router;
+  }
+}
+
 .querySection {
   .form-control {
     width: 10em;
   }
   label {
     &.title {
-        width: 100px;
+      width: 100px;
     }
   }
 }

@@ -1,6 +1,13 @@
-<nav>
-  <a routerLink="/download">download</a>.
-  <a routerLink="/approval">approval</a>.
-  <a routerLink="/maintain">maintain</a>
-</nav>
-<router-outlet></router-outlet>
+<main id="root" class="grid-container">
+  <!-- <nav>
+    <a routerLink="/download">download</a>.
+    <a routerLink="/approval">approval</a>.
+    <a routerLink="/maintain">maintain</a>
+  </nav> -->
+  <section class="side-menu">
+    <app-side-menu></app-side-menu>
+  </section>
+  <section class="router-container">
+    <router-outlet></router-outlet>
+  </section>
+</main>
