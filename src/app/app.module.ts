@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 
 import { TableInfoComponent } from './table-info/table-info.component';
 import { DownloadApprovalComponent } from './download-approval/download-approval.component';
+import { MaintainComponent } from './maintain/maintain.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableInfoComponent,
-    DownloadApprovalComponent
+    DownloadApprovalComponent,
+    MaintainComponent
   ],
   imports: [
     BrowserModule,
