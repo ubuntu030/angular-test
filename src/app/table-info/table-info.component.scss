@@ -1,3 +1,18 @@
+.querySection {
+  .datepicker-ctn {
+    position: relative;
+    .day-icon {
+      position: absolute;
+      right: 0;
+      background: #b0b0b0;
+      width: 38px;
+      padding: 6px;
+      border-top-right-radius: .25em;
+      border-bottom-right-radius:.25em
+    }
+  }
+}
+
 .tableSection {
   .table {
     thead {
