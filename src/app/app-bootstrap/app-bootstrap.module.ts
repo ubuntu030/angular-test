@@ -18,7 +18,7 @@ import {
   declarations: [],
   imports: [
     CommonModule,
-    BsDropdownModule,
+    BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     AccordionModule,
     AlertModule,
@@ -26,7 +26,6 @@ import {
     CarouselModule,
     CollapseModule,
     BsDatepickerModule.forRoot(),
-    BsDropdownModule,
     ModalModule,
   ],
   providers: [
