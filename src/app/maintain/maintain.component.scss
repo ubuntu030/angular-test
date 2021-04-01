@@ -1,0 +1,51 @@
+.querySection {
+  .datepicker-ctn {
+    position: relative;
+    .day-icon {
+      position: absolute;
+      right: 0;
+      background: #b0b0b0;
+      width: 38px;
+      padding: 6px;
+      border-top-right-radius: 0.25em;
+      border-bottom-right-radius: 0.25em;
+    }
+  }
+}
+
+.tableSection {
+  .table {
+    thead {
+      th {
+        vertical-align: middle;
+        padding: 0.4em;
+
+        span {
+          display: block;
+        }
+      }
+    }
+    tbody {
+      td {
+        word-break: keep-all;
+        padding: 0.4em;
+        .td-group {
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-body {
+  .row {
+    .col {
+      label {
+        width: 100px;
+        height: 2em;
+      }
+    }
+  }
+}
