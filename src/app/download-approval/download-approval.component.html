@@ -96,10 +96,26 @@
           <tr>
             <th scope="row"><input type="checkbox" name="" id="" /></th>
             <td>發佈審核</td>
-            <td>一般公告、公司LOGO</td>
-            <td>LOGO、使用說明、範例</td>
+            <td>
+              <div class="td-group">
+                <span> 一般公告 </span>
+                <span> 公司LOGO </span>
+              </div>
+            </td>
+            <td>
+              <div class="td-group">
+                <span>LOGO</span>
+                <span>使用說明</span>
+                <span>範例</span>
+              </div>
+            </td>
             <td>全員工</td>
-            <td>2021/3/2 小朋友(Kid)</td>
+            <td>
+              <div class="td-group">
+                <span>2021/3/2</span>
+                <span>小朋友(Kid)</span>
+              </div>
+            </td>
             <td>2021/3/3</td>
             <td></td>
             <td>V</td>
@@ -117,12 +133,22 @@
             <td>單位公告、稽核單</td>
             <td>稽核單、使用說明</td>
             <td><a href="">中文名字</a></td>
-            <td>2021/3/3 大朋友(Kid)</td>
+            <td>
+              <div class="td-group">
+                <span>2021/3/3</span>
+                <span>大朋友(Kid)</span>
+              </div>
+            </td>
             <td>2021/3/20</td>
             <td>大朋友(Kid)</td>
             <td></td>
             <td></td>
-            <td>小朋友(Kid) 評估使用</td>
+            <td>
+              <div class="td-group">
+                <span>小朋友(Kid)</span>
+                <span>評估使用</span>
+              </div>
+            </td>
             <td>
               <button class="btn btn-secondary" (click)="openModal(template)">
                 審核
@@ -221,7 +247,7 @@
         <div class="col form-inline">
           <label class="table-primary p-2">下載審核者</label>
           <div class="pl-2">
-            <span>公告單位主管(admin)</span>
+            <span>公告單位主管(Dep_Admin)</span>
           </div>
         </div>
       </div>
@@ -253,7 +279,7 @@
             <span>稽核表</span>
           </div>
         </div>
-        <div class="col form-inline icon-img-ctn">
+        <div class="col form-inline">
           <img
             src="/assets/icons/icons8-microsoft-word-48.png"
             alt=""
@@ -333,11 +359,7 @@
     >
       核准
     </button>
-    <button
-      type="button"
-      class="btn btn-danger"
-      (click)="modalRef.hide()"
-    >
+    <button type="button" class="btn btn-danger" (click)="modalRef.hide()">
       退件
     </button>
     <button

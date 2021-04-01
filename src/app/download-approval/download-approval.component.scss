@@ -14,12 +14,12 @@
       td {
         word-break: keep-all;
         padding: 0.4em;
+        .td-group {
+          span {
+            display: block;
+          }
+        }
       }
     }
   }
-}
-
-.icon-img-ctn {
-    display: flex;
-    flex-direction: column;
 }
