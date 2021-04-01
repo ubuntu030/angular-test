@@ -1,14 +1,13 @@
 <div class="side-menu-ctn">
-  <div class="title-ctn">
+  <div
+    (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed"
+    aria-controls="collapseBasic"
+    class="title"
+    class="title-ctn"
+  >
     <img src="/assets/icons/menu_s_01@2x.png" alt="" srcset="" />
-    <div
-      (click)="isCollapsed = !isCollapsed"
-      [attr.aria-expanded]="!isCollapsed"
-      aria-controls="collapseBasic"
-      class="title"
-    >
-      資訊專區
-    </div>
+    <div>資訊專區</div>
   </div>
   <div
     id="collapseBasic"
@@ -19,9 +18,9 @@
     <ul class="group-list">
       <li>公告規章</li>
       <li>最新公告維護設定</li>
-      <li>下載專區</li>
-      <li>下載專區維護設定</li>
-      <li>下載專區審核</li>
+      <li><a routerLink="/download"> 下載專區</a></li>
+      <li><a routerLink="/maintain">下載專區維護設定</a></li>
+      <li><a routerLink="/approval">下載專區審核</a></li>
     </ul>
   </div>
 </div>
