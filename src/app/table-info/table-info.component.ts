@@ -8,10 +8,17 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 export class TableInfoComponent implements OnInit {
   modalRef!: BsModalRef;
+  bsValueStart = new Date();
+  bsValueEnd = new Date();
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService) {
+    this.bsValueEnd.setDate(this.bsValueEnd.getDate() + 30);
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('table info init..');
+    
+  }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(

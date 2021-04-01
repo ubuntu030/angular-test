@@ -8,8 +8,12 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 export class MaintainComponent implements OnInit {
   modalRef!: BsModalRef;
+  bsValueStart = new Date();
+  bsValueEnd = new Date();
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService) {
+    this.bsValueEnd.setDate(this.bsValueEnd.getDate() + 30);
+  }
 
   ngOnInit(): void {
     console.log('maintain init');

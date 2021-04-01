@@ -44,7 +44,11 @@
               placeholder="起日"
               class="form-control w-100"
               bsDatepicker
-              [bsConfig]="{ adaptivePosition: true }"
+              [bsConfig]="{
+                adaptivePosition: true,
+                dateInputFormat: 'YYYY-MM-DD'
+              }"
+              [bsValue]="bsValueStart"
             />
             <img
               src="/assets/icons/day@2x.png"
@@ -57,10 +61,14 @@
           <div class="datepicker-ctn">
             <input
               type="text"
-              placeholder="起日"
+              placeholder="訖日"
               class="form-control w-100"
               bsDatepicker
-              [bsConfig]="{ adaptivePosition: true }"
+              [bsConfig]="{
+                adaptivePosition: true,
+                dateInputFormat: 'YYYY-MM-DD'
+              }"
+              [bsValue]="bsValueEnd"
             />
             <img
               src="/assets/icons/day@2x.png"
@@ -81,7 +89,9 @@
     <div class="row mb-2">
       <div class="col">
         <button class="btn btn-primary ml-auto mr-3 float-right">新增</button>
-        <button type="button" class="btn btn-primary mr-3 float-right">查詢</button>
+        <button type="button" class="btn btn-primary mr-3 float-right">
+          查詢
+        </button>
       </div>
     </div>
   </section>

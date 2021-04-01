@@ -32,9 +32,18 @@
               placeholder="起日"
               class="form-control w-100"
               bsDatepicker
-              [bsConfig]="{ adaptivePosition: true }"
+              [bsConfig]="{
+                adaptivePosition: true,
+                dateInputFormat: 'YYYY-MM-DD'
+              }"
+              [bsValue]="bsValueStart"
             />
-            <img src="/assets/icons/day@2x.png" class="day-icon" alt="" srcset="">
+            <img
+              src="/assets/icons/day@2x.png"
+              class="day-icon"
+              alt=""
+              srcset=""
+            />
           </div>
           <span> ~ </span>
           <div class="datepicker-ctn">
@@ -43,9 +52,18 @@
               placeholder="訖日"
               class="form-control w-100"
               bsDatepicker
-              [bsConfig]="{ adaptivePosition: true }"
+              [bsConfig]="{
+                adaptivePosition: true,
+                dateInputFormat: 'YYYY-MM-DD'
+              }"
+              [bsValue]="bsValueEnd"
             />
-            <img src="/assets/icons/day@2x.png" class="day-icon" alt="" srcset="">
+            <img
+              src="/assets/icons/day@2x.png"
+              class="day-icon"
+              alt=""
+              srcset=""
+            />
           </div>
         </div>
       </div>
@@ -90,7 +108,12 @@
             </td>
             <td class="td-group">
               <span class="block-span">
-                <img src="/assets/icons/icons8-pdf-48.png" class="file-icon" alt="" srcset="" />
+                <img
+                  src="/assets/icons/icons8-pdf-48.png"
+                  class="file-icon"
+                  alt=""
+                  srcset=""
+                />
                 <img
                   src="/assets/icons/icons8-microsoft-word-48.png"
                   alt=""
@@ -105,11 +128,26 @@
                 />
               </span>
               <span class="block-span">
-                <img src="/assets/icons/icons8-png-48.png" alt="" srcset="" class="file-icon" />
-                <img src="/assets/icons/icons8-jpg-48.png" alt="" srcset="" class="file-icon" />
+                <img
+                  src="/assets/icons/icons8-png-48.png"
+                  alt=""
+                  srcset=""
+                  class="file-icon"
+                />
+                <img
+                  src="/assets/icons/icons8-jpg-48.png"
+                  alt=""
+                  srcset=""
+                  class="file-icon"
+                />
               </span>
               <span class="block-span">
-                <img src="/assets/icons/icons8-ppt-48.png" alt="" srcset="" class="file-icon" />
+                <img
+                  src="/assets/icons/icons8-ppt-48.png"
+                  alt=""
+                  srcset=""
+                  class="file-icon"
+                />
               </span>
             </td>
             <td>1.5MB</td>
@@ -269,7 +307,12 @@
         <div class="col form-inline">
           <label>申請人</label>
           <div class="pl-2 offset-md-1">
-            <input type="text" class="form-control" disabled value="小朋友 (Kid)" />
+            <input
+              type="text"
+              class="form-control"
+              disabled
+              value="小朋友 (Kid)"
+            />
           </div>
         </div>
       </div>
