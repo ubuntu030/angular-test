@@ -90,30 +90,28 @@
       <table class="table table-bordered">
         <thead>
           <tr class="table-primary">
-            <th scope="col"><input type="checkbox" name="" id="" /></th>
-            <th scope="col"><span>審核類型</span></th>
             <th scope="col"><span>公告類別</span><span>公告名稱</span></th>
+            <th scope="col"><span>公告單位</span></th>
+            <th scope="col"><span>公告狀態</span></th>
             <th scope="col"><span>附件名稱</span></th>
             <th scope="col"><span>檢視單位</span><span>檢視人員</span></th>
-            <th scope="col"><span>發佈日期</span><span>發佈者</span></th>
             <th scope="col"><span>上架日期</span><span>下架日期</span></th>
-            <th scope="col"><span>下載審核</span><span>審核者</span></th>
+            <th scope="col"><span>下載審核</span><span>下載審核者</span></th>
             <th scope="col"><span>浮水印</span></th>
             <th scope="col"><span>廢止</span></th>
-            <th scope="col"><span>下載申請者</span><span>下載原因</span></th>
             <th scope="col"><span>操作</span></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row"><input type="checkbox" name="" id="" /></th>
-            <td>發佈審核</td>
-            <td>
+            <th scope="row">
               <div class="td-group">
                 <span> 一般公告 </span>
                 <span> 公司LOGO </span>
               </div>
-            </td>
+            </th>
+            <td></td>
+            <td>待審核</td>
             <td>
               <div class="td-group">
                 <span>LOGO</span>
@@ -129,25 +127,19 @@
               </div>
             </td>
             <td>2021/3/3</td>
-            <td></td>
             <td>V</td>
             <td>V</td>
             <td></td>
-            <td>
-              <button class="btn btn-secondary" (click)="openModal(template)">
-                審核
-              </button>
-            </td>
           </tr>
           <tr>
-            <th scope="row"><input type="checkbox" name="" id="" /></th>
-            <td>下載審核</td>
-            <td>
+            <th scope="row">
               <div class="td-group">
                 <span>單位公告</span>
                 <span>稽核單</span>
               </div>
-            </td>
+            </th>
+            <td></td>
+            <td>待審核</td>
             <td>
               <div class="td-group">
                 <span>稽核單</span>
@@ -165,17 +157,6 @@
             <td>大朋友(Kid)</td>
             <td></td>
             <td></td>
-            <td>
-              <div class="td-group">
-                <span>小朋友(Kid)</span>
-                <span>評估使用</span>
-              </div>
-            </td>
-            <td>
-              <button class="btn btn-secondary" (click)="openModal(template)">
-                審核
-              </button>
-            </td>
           </tr>
         </tbody>
       </table>

@@ -20,9 +20,10 @@
       th {
         vertical-align: middle;
         padding: 0.4em;
-
-        span {
-          display: block;
+        .td-group {
+          span {
+            display: block;
+          }
         }
       }
     }
