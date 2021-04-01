@@ -1,6 +1,19 @@
 <main class="container">
-    <h3>下載專區</h3>
+    <h3>下載專區審核</h3>
     <section class="my-2 querySection">
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="">審核類別</label>
+          <div class="pl-2">
+            <select class="form-control" id="exampleFormControlSelect2">
+              <option>請選擇</option>
+              <option>發佈審核</option>
+              <option>下載審核</option>
+            </select>
+          </div>
+        </div>
+        <div class="col form-inline"></div>
+      </div>
       <div class="row mb-2">
         <div class="col form-inline">
           <label class="">公告類別</label>
@@ -9,7 +22,7 @@
               <option>請選擇</option>
               <option>一般公告</option>
               <option>單位公告</option>
-              <option>主管位公告</option>
+              <option>主管公告</option>
             </select>
           </div>
         </div>
@@ -34,18 +47,28 @@
                 bsDatepicker
                 [bsConfig]="{ adaptivePosition: true }"
               />
-              <img src="/assets/icons/day@2x.png" class="day-icon" alt="" srcset="">
+              <img
+                src="/assets/icons/day@2x.png"
+                class="day-icon"
+                alt=""
+                srcset=""
+              />
             </div>
             <span> ~ </span>
             <div class="datepicker-ctn">
               <input
                 type="text"
-                placeholder="訖日"
+                placeholder="起日"
                 class="form-control w-100"
                 bsDatepicker
                 [bsConfig]="{ adaptivePosition: true }"
               />
-              <img src="/assets/icons/day@2x.png" class="day-icon" alt="" srcset="">
+              <img
+                src="/assets/icons/day@2x.png"
+                class="day-icon"
+                alt=""
+                srcset=""
+              />
             </div>
           </div>
         </div>
@@ -67,20 +90,30 @@
         <table class="table table-bordered">
           <thead>
             <tr class="table-primary">
-              <th scope="col">發佈日期</th>
-              <th scope="col">公告類別</th>
-              <th scope="col">公告名稱</th>
-              <th scope="col">附件名稱</th>
-              <th scope="col">檔案下載</th>
-              <th scope="col">檔案大小</th>
-              <th scope="col">更新日期</th>
+              <th scope="col"><input type="checkbox" name="" id="" /></th>
+              <th scope="col"><span>審核類型</span></th>
+              <th scope="col"><span>公告類別</span><span>公告名稱</span></th>
+              <th scope="col"><span>附件名稱</span></th>
+              <th scope="col"><span>檢視單位</span><span>檢視人員</span></th>
+              <th scope="col"><span>發佈日期</span><span>發佈者</span></th>
+              <th scope="col"><span>上架日期</span><span>下架日期</span></th>
+              <th scope="col"><span>下載審核</span><span>審核者</span></th>
+              <th scope="col"><span>浮水印</span></th>
+              <th scope="col"><span>廢止</span></th>
+              <th scope="col"><span>下載申請者</span><span>下載原因</span></th>
+              <th scope="col"><span>操作</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">2021/3/4</th>
-              <td>一般公告</td>
-              <td>公司LOGO</td>
+              <th scope="row"><input type="checkbox" name="" id="" /></th>
+              <td>發佈審核</td>
+              <td>
+                <div class="td-group">
+                  <span> 一般公告 </span>
+                  <span> 公司LOGO </span>
+                </div>
+              </td>
               <td>
                 <div class="td-group">
                   <span>LOGO</span>
@@ -88,45 +121,69 @@
                   <span>範例</span>
                 </div>
               </td>
+              <td>全員工</td>
               <td>
-                <img src="/assets/icons/icons8-pdf-48.png" alt="" srcset="" />
-                <img
-                  src="/assets/icons/icons8-microsoft-word-48.png"
-                  alt=""
-                  srcset=""
-                />
-                <img
-                  src="/assets/icons/icons8-microsoft-excel-48.png"
-                  alt=""
-                  srcset=""
-                />
-                <img src="/assets/icons/icons8-png-48.png" alt="" srcset="" />
-                <img src="/assets/icons/icons8-jpg-48.png" alt="" srcset="" />
-                <img src="/assets/icons/icons8-ppt-48.png" alt="" srcset="" />
+                <div class="td-group">
+                  <span>2021/3/2</span>
+                  <span>小朋友(Kid)</span>
+                </div>
               </td>
-              <td>1.5MB</td>
               <td>2021/3/3</td>
+              <td></td>
+              <td>V</td>
+              <td>V</td>
+              <td></td>
+              <td>
+                <button class="btn btn-secondary" (click)="openModal(template)">
+                  審核
+                </button>
+              </td>
             </tr>
             <tr>
-              <th scope="row">2021/3/4</th>
-              <td>單位公告</td>
-              <td>稽核單</td>
+              <th scope="row"><input type="checkbox" name="" id="" /></th>
+              <td>下載審核</td>
+              <td>
+                <div class="td-group">
+                  <span>單位公告</span>
+                  <span>稽核單</span>
+                </div>
+              </td>
               <td>
                 <div class="td-group">
                   <span>稽核單</span>
                   <span>使用說明</span>
                 </div>
               </td>
+              <td><a href="">中文名字</a></td>
+              <td>
+                <div class="td-group">
+                  <span>2021/3/3</span>
+                  <span>大朋友(Kid)</span>
+                </div>
+              </td>
+              <td>2021/3/20</td>
+              <td>大朋友(Kid)</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="td-group">
+                  <span>小朋友(Kid)</span>
+                  <span>評估使用</span>
+                </div>
+              </td>
               <td>
                 <button class="btn btn-secondary" (click)="openModal(template)">
-                  申請
+                  審核
                 </button>
               </td>
-              <td>-</td>
-              <td>2021/3/20</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="row mb-2">
+        <div class="col">
+          <button type="button" class="btn btn-primary">核准</button>
+        </div>
       </div>
     </section>
   </main>
@@ -135,7 +192,7 @@
   <!-- bootstrap modal -->
   <ng-template #template>
     <div class="modal-header">
-      <h4 class="modal-title pull-left">申請</h4>
+      <h4 class="modal-title pull-left">審核</h4>
       <button
         type="button"
         class="close pull-right"
@@ -149,13 +206,13 @@
       <section class="my-2 p-2">
         <div class="row mb-2">
           <div class="col form-inline">
-            <label class="table-primary">公告類別</label>
+            <label class="table-primary p-2">公告類別</label>
             <div class="pl-2">
               <span>一般公告</span>
             </div>
           </div>
           <div class="col form-inline">
-            <label class="table-primary">公告單位</label>
+            <label class="table-primary p-2">公告單位</label>
             <div class="pl-2">
               <span>營運管理處</span>
             </div>
@@ -164,28 +221,13 @@
         <hr class="mt-1 mb-1" />
         <div class="row mb-2">
           <div class="col form-inline">
-            <label class="table-primary">發佈日期</label>
+            <label class="table-primary p-2">檢視單位</label>
             <div class="pl-2">
-              <span>2020/12/31</span>
+              <span>全員工</span>
             </div>
           </div>
           <div class="col form-inline">
-            <label class="table-primary">發佈者</label>
-            <div class="pl-2">
-              <span>大朋友(child)</span>
-            </div>
-          </div>
-        </div>
-        <hr class="mt-1 mb-1" />
-        <div class="row mb-2">
-          <div class="col form-inline">
-            <label class="table-primary">上架日期</label>
-            <div class="pl-2">
-              <span>2021/3/5</span>
-            </div>
-          </div>
-          <div class="col form-inline">
-            <label class="table-primary">下架日期</label>
+            <label class="table-primary p-2">檢視人員</label>
             <div class="pl-2">
               <span></span>
             </div>
@@ -194,13 +236,43 @@
         <hr class="mt-1 mb-1" />
         <div class="row mb-2">
           <div class="col form-inline">
-            <label class="table-primary">下載審核</label>
+            <label class="table-primary p-2">發佈日期</label>
+            <div class="pl-2">
+              <span>2020/12/31</span>
+            </div>
+          </div>
+          <div class="col form-inline">
+            <label class="table-primary p-2">發佈者</label>
+            <div class="pl-2">
+              <span>大朋友(child)</span>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-1 mb-1" />
+        <div class="row mb-2">
+          <div class="col form-inline">
+            <label class="table-primary p-2">上架日期</label>
+            <div class="pl-2">
+              <span>2021/3/5</span>
+            </div>
+          </div>
+          <div class="col form-inline">
+            <label class="table-primary p-2">下架日期</label>
+            <div class="pl-2">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-1 mb-1" />
+        <div class="row mb-2">
+          <div class="col form-inline">
+            <label class="table-primary p-2">下載審核</label>
             <div class="pl-2">
               <input type="checkbox" name="" id="" disabled checked />
             </div>
           </div>
           <div class="col form-inline">
-            <label class="table-primary">下載審核者</label>
+            <label class="table-primary p-2">下載審核者</label>
             <div class="pl-2">
               <span>公告單位主管(Dep_Admin)</span>
             </div>
@@ -209,7 +281,7 @@
         <hr class="mt-1 mb-1" />
         <div class="row mb-2">
           <div class="col form-inline">
-            <label class="table-primary">浮水印</label>
+            <label class="table-primary p-2">浮水印</label>
             <div class="pl-2">
               <input type="checkbox" name="" id="" disabled checked />
             </div>
@@ -219,7 +291,7 @@
         <hr class="mt-1 mb-1" />
         <div class="row mb-2">
           <div class="col form-inline">
-            <label class="table-primary">公告名稱</label>
+            <label class="table-primary p-2">公告名稱</label>
             <div class="pl-2">
               <span>稽核公告</span>
             </div>
@@ -229,27 +301,58 @@
         <hr class="mt-1 mb-1" />
         <div class="row mb-2">
           <div class="col form-inline">
-            <label class="table-primary">附件名稱</label>
+            <label class="table-primary p-2">附件名稱</label>
             <div class="pl-2">
               <span>稽核表</span>
             </div>
           </div>
-          <div class="col form-inline"></div>
+          <div class="col form-inline">
+            <img
+              src="/assets/icons/icons8-microsoft-word-48.png"
+              alt=""
+              srcset=""
+            />
+            <img
+              src="/assets/icons/icons8-microsoft-excel-48.png"
+              alt=""
+              srcset=""
+            />
+          </div>
         </div>
-        <div class="row mb-2">
+        <!-- <div class="row mb-2">
           <div class="col form-inline">
             <label></label>
-            <div class="pl-2">
+            <div class="ml-5 pl-4">
               <span>使用說明</span>
             </div>
           </div>
           <div class="col form-inline"></div>
-        </div>
-        <div class="row mb-2">
+        </div> -->
+        <!-- <div class="row mb-2">
           <div class="col form-inline">
             <label></label>
-            <div class="pl-2">
+            <div class="ml-5 pl-4">
               <span>範例</span>
+            </div>
+          </div>
+          <div class="col form-inline"></div>
+        </div> -->
+        <hr class="mt-1 mb-1" />
+        <div class="row mb-2">
+          <div class="col form-inline">
+            <label class="table-primary p-2">下載申請者</label>
+            <div class="pl-2">
+              <span>大朋友(Kid)</span>
+            </div>
+          </div>
+          <div class="col form-inline"></div>
+        </div>
+        <hr class="mt-1 mb-1" />
+        <div class="row mb-2">
+          <div class="col form-inline">
+            <label class="table-primary p-2">下載原因</label>
+            <div class="pl-2">
+              <span>需要使用</span>
             </div>
           </div>
           <div class="col form-inline"></div>
@@ -259,15 +362,7 @@
       <section class="my-2 p-2">
         <div class="row mb-2">
           <div class="col form-inline">
-            <label>申請人</label>
-            <div class="pl-2 offset-md-1">
-              <input type="text" class="form-control" disabled value="小朋友 (Kid)" />
-            </div>
-          </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col form-inline">
-            <label>申請原因</label>
+            <label>備註</label>
             <div class="pl-2 offset-md-1">
               <textarea
                 name=""
@@ -275,10 +370,12 @@
                 class="form-control"
                 cols="50"
                 rows="3"
+                placeholder="請輸入(退件)原因"
               ></textarea>
             </div>
           </div>
         </div>
+        <div class="row mb-2"></div>
       </section>
     </div>
     <div class="modal-footer">
@@ -287,7 +384,10 @@
         class="btn btn-primary ml-auto"
         (click)="modalRef.hide()"
       >
-        申請
+        核准
+      </button>
+      <button type="button" class="btn btn-danger" (click)="modalRef.hide()">
+        退件
       </button>
       <button
         type="button"
