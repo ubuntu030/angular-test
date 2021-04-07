@@ -41,14 +41,13 @@
           <div class="datepicker-ctn">
             <input
               type="text"
-              placeholder="起日"
+              placeholder="YYYY/MM/DD"
               class="form-control w-100"
               bsDatepicker
               [bsConfig]="{
                 adaptivePosition: true,
                 dateInputFormat: 'YYYY/MM/DD'
               }"
-              [bsValue]="bsValueStart"
             />
             <img
               src="/assets/icons/day@2x.png"
@@ -61,14 +60,13 @@
           <div class="datepicker-ctn">
             <input
               type="text"
-              placeholder="訖日"
+              placeholder="YYYY/MM/DD"
               class="form-control w-100"
               bsDatepicker
               [bsConfig]="{
                 adaptivePosition: true,
                 dateInputFormat: 'YYYY/MM/DD'
               }"
-              [bsValue]="bsValueEnd"
             />
             <img
               src="/assets/icons/day@2x.png"
@@ -103,10 +101,10 @@
             <th scope="col"><span>附件名稱</span></th>
             <th scope="col"><span>檢視單位</span><span>檢視人員</span></th>
             <th scope="col"><span>發佈日期</span><span>發佈者</span></th>
+            <th scope="col"><span>異動人員</span></th>
             <th scope="col"><span>上架日期</span><span>下架日期</span></th>
-            <th scope="col"><span>下載審核</span><span>審核者</span></th>
+            <th scope="col"><span>下載審核者</span></th>
             <th scope="col"><span>浮水印</span></th>
-            <th scope="col"><span>廢止</span></th>
             <th scope="col"><span>下載申請者</span><span>下載原因</span></th>
             <th scope="col"><span>操作</span></th>
           </tr>
@@ -133,9 +131,14 @@
                 <span>小朋友(Kid)</span>
               </div>
             </td>
-            <td>2021/3/3</td>
             <td></td>
-            <td>V</td>
+            <td>
+              <div class="td-group">
+                <span>2021/03/03</span>
+                <span>2021/03/03</span>
+              </div>
+            </td>
+            <td></td>
             <td>V</td>
             <td></td>
             <td>
@@ -165,9 +168,9 @@
                 <span>大朋友(Kid)</span>
               </div>
             </td>
+            <td></td>
             <td>2021/3/20</td>
             <td>大朋友(Kid)</td>
-            <td></td>
             <td></td>
             <td>
               <div class="td-group">
@@ -208,6 +211,15 @@
   </div>
   <div class="modal-body container">
     <section class="my-2 p-2">
+      <div class="row mb-2">
+        <div class="col form-inline">
+          <label class="table-primary p-2">審核類別</label>
+          <div class="pl-2">
+            <span>下載審核</span>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-1 mb-1" />
       <div class="row mb-2">
         <div class="col form-inline">
           <label class="table-primary p-2">公告類別</label>
@@ -290,7 +302,12 @@
             <input type="checkbox" name="" id="" disabled checked />
           </div>
         </div>
-        <div class="col form-inline"></div>
+        <div class="col form-inline">
+          <label class="table-primary p-2">異動人員</label>
+          <div class="pl-2">
+            <span></span>
+          </div>
+        </div>
       </div>
       <hr class="mt-1 mb-1" />
       <div class="row mb-2">
